@@ -43,7 +43,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
         const type = event.type;
 
-        if(!relevantEvents.has(type)) {
+        if(relevantEvents.has(type)) {
             try {
                 switch (type) {
                     case "checkout.session.completed":
